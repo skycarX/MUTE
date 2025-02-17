@@ -1,0 +1,215 @@
+*{margin: 0; padding: 0;}
+@font-face{
+    font-family: Bebas;
+    src: url("BebasNeue-Regular.ttf");
+}
+@font-face {
+    font-family: sono;
+    src: url('Sono-Light.ttf');
+}
+
+
+#screensaver div{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    font-family: Bebas;
+    background-image: url('back.png');
+    background-clip: text;
+    color: transparent;   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+}
+
+#screensaver{
+    font-size: 200px;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    z-index: 1;
+}
+
+main{
+    font-family: sono;
+    font-weight: 400;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url('back.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    
+}
+
+header{
+    position: sticky;
+    height: 75px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5) ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.volume{
+    accent-color: rgba(255, 255, 255, 0.388);
+    min-width: 190px;
+    max-width: 80%;
+    width: 50%;
+    -webkit-appearance: none;
+    appearance: none;
+    height: 10px;
+    background-color: rgba(255, 255, 255, 0.388);
+    border-radius: 250px;
+    outline: none;
+    opacity: 0.5;
+    transition: opacity 1s;
+}
+
+.volume:hover{
+    opacity: 1;
+}
+
+#play{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    inset: 0;
+    width: 5cm;
+    height: 5cm;
+    margin: auto;
+    border-radius: 50%;
+    background-color: #052e0460;
+    border: 5px solid #052e04;
+    transition: 1s ease;
+}
+
+#play:hover{
+    background-color: #03270380;
+}
+
+#play:active{
+    background-color: #06370580;
+    transition: .19s;
+}
+
+#play svg{
+    height: 100px;
+    width: 100px;
+}
+
+#volume_element{
+    z-index: 2;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    border: none;
+    background-color: rgba(0, 0, 0, 0.30);
+    margin: 0  -40px -40px 0;
+    transition: .4s;
+}
+
+#volume_element:hover{
+    background-color: rgba(0, 39, 12, 0.508);
+}
+
+#volume_element:active{
+    background-color: #052e0480;
+    transition: .1s;
+}
+#volume_element svg{
+    width: 50%;
+    height: 50%;
+}
+#menu{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.30);
+    border-radius: 3% 3% 0 3%;
+    color: rgb(223, 255, 244);
+    float: right;
+    overflow: auto;
+}
+
+.menu_element{
+    padding: 15px;
+    opacity: 0.9;
+    float: left;
+    width: 100px;
+    margin-right: 15px;
+    margin-left: 15px;
+    font-size: 10px;
+}
+.element_volume{
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: rgba(255, 255, 255, 0.388);
+    accent-color: rgba(255, 255, 255, 0.388);
+    border-radius: 15px;
+    height: 5px;
+    width: 90%;
+}
+
+.menu_element img{
+    height: 50px;
+    width: 50px;
+}
+
+#alert{
+    z-index: 999;
+    min-width: 200px;
+    max-width: 350px;
+    background-color: rgba(0, 0, 0, 0.30);
+    margin-left: 1%;
+    border-radius: 0px 25px 25px 25px;
+    padding: 15px;
+    color: rgba(255, 255, 255, 0.775);
+}
+#alert a{
+    color: rgba(255, 255, 255, 0.775);
+    text-decoration: none;
+    font-size: 10px;
+    background-color: #052e0460;
+    padding: 5px;
+    border-radius: 25px;
+}
+
+@media screen and (max-width: 700px) {
+    #screensaver div{
+        font-size: 60px;
+        background-image: url(https://img.gazeta.ru/files3/681/16330681/shutterstock_736023025-pic_32ratio_1200x800-1200x800-7780.jpg);
+        background-clip: text;
+        color: transparent;   
+    }
+    .menu_element img{
+        height: 30px;
+        width: 30px;
+    }
+    .menu_element{
+        font-size: 10px;
+    }
+
+}
+
+@media screen and (max-width: 400px){
+    .menu_element img{
+        height: 20px;
+        width: 20px;
+        margin-bottom: 1px;
+    }
+    .menu_element{
+        font-size: 5px;
+        padding: 5px;
+    }
+}
